@@ -3,9 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Air Pollution Indicator</title>
+	<title>Smart EcoPath</title>
 	<link rel="stylesheet" href="./style.css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet">
     <style>
         /* Sidebar styling */
@@ -46,6 +47,82 @@
     </style>
 </head>
 <body>
+
+	<nav class="navbar navbar-expand-lg navbar-light ">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Smart EcoPath</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Air Pollution</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="quiz.html">Quiz</a>
+					</li>
+					<li class="nav-item">
+						<!-- Update this link to point to the smart-transport.html page -->
+						<a class="nav-link" href="Smart_transport.html">Smart Transport</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="About.html">About</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<style>
+		 .navbar {
+	background-image: linear-gradient(to right bottom, #a3c8ff, #7ab1ff, #85b7d8, #4f678d); /* Lighter version of the original gradient */
+	padding: 10px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+.navbar-brand {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: white;
+}
+
+.navbar-nav .nav-link {
+	color: white !important;
+	font-weight: 600;
+	margin-left: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+	color: #f1f1f1 !important;
+}
+
+.navbar-toggler-icon {
+	background-color: white;
+}
+
+        /* Set the background of the full page to a blue shade */
+		html, body {
+    height: 150%; /* Ensures the entire height of the viewport */
+    margin: 0; /* Removes default browser margins */
+    padding: 0; /* Removes default browser padding */
+    display: flex; /* Allows proper layout */
+    flex-direction: column; /* Aligns content vertically */
+    background: linear-gradient(to right bottom, #00c6ff, #0072ff, #4b6cb7, #182848);
+    background-size: cover; /* Ensures the background gradient covers the full screen */
+    background-repeat: no-repeat; /* Prevents tiling */
+}
+
+	</style>
+
+
     
 	<div class="root">
 		<h1 class="heading">Air Pollution Indicator</h1>
@@ -115,6 +192,8 @@
 		</div>
 	</div>
 
+
+
 	<!-- Sidebar with AQI Table -->
 	<div class="sidebar">
 		<h2>Air Quality Levels</h2>
@@ -160,6 +239,8 @@
 			</tbody>
 		</table>
 	</div>
+
+	
 
 	<script src="./App.js" defer></script>
 

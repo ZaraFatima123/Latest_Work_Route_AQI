@@ -89,4 +89,12 @@ srchBtn.addEventListener("click", () => {
 	}
 })
 
+const aboutLink = document.getElementById('aboutLink');
+const aboutSection = document.getElementById('about');
+
+
+
+
+
+
 getUserLocation()

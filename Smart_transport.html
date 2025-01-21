@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart transport</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(to right bottom, #00c6ff, #0072ff, #4b6cb7, #182848);
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-control, .form-select {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #333;
+        }
+
+        #find-routes-btn {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        #find-routes-btn:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        h1, h2 {
+            color: white;
+        }
+
+        #map {
+            height: 400px;
+        }
+
+        #routes-info {
+            background-color: rgb(244, 238, 244);
+            color: rgb(23, 16, 16);
+            padding: 10px;
+            border-radius: 8px;
+            max-height: 150px;
+            overflow-y: auto;
+            font-size: 12px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        #route-summary {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .leaflet-routing-container {
+            width: 280px !important;
+        }
+
+        .leaflet-routing-container a {
+            font-size: 12px !important;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-image: linear-gradient(to right bottom, #a3c8ff, #7ab1ff, #85b7d8, #4f678d); /* Lighter version of the original gradient */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 600;
+            margin-left: 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f1f1f1 !important;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Smart EcoPath</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Air Pollution</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Smart_transport.html">Smart transport</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1>Find Nearby Transport Routes</h1><br/>
+        
+        <div class="mb-3">
+            <label for="location-input" class="form-label">Enter your location (Latitude, Longitude):</label>
+            <input type="text" class="form-control w-50 mx-auto" id="location-input" placeholder="e.g., 28.6139, 77.2090" />
+        </div>
+        
+        <div class="mb-3">
+            <label for="destination-input" class="form-label">Enter destination location (Latitude, Longitude):</label>
+            <input type="text" class="form-control w-50 mx-auto" id="destination-input" placeholder="e.g., 28.7041, 77.1025" />
+        </div>
+        
+        <div class="mb-3">
+            <label for="transport-mode" class="form-label">Select transport mode:</label>
+            <select class="form-select w-50 mx-auto" id="transport-mode">
+                <option value="driving-car">Driving (Car)</option>
+                <option value="cycling-regular">Cycling</option>
+                <option value="foot-walking">Walking</option>
+            </select>
+        </div>
+
+        <button id="find-routes-btn" class="btn btn-primary">Find Routes</button>
+        
+        <div id="routes-info" class="mt-4"></div>
+        
+        <div id="route-summary" class="mt-4" style="display: none;"></div>
+
+        <div id="map" class="mt-4"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<script>
+    var map = L.map('map').setView([28.6139, 77.2090], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    document.getElementById('find-routes-btn').addEventListener('click', function () {
+        var startLocation = document.getElementById('location-input').value.split(',');
+        var endLocation = document.getElementById('destination-input').value.split(',');
+
+        if (startLocation.length == 2 && endLocation.length == 2) {
+            var startLat = parseFloat(startLocation[0].trim());
+            var startLon = parseFloat(startLocation[1].trim());
+            var endLat = parseFloat(endLocation[0].trim());
+            var endLon = parseFloat(endLocation[1].trim());
+
+            var routeControl = L.Routing.control({
+                waypoints: [
+                    L.latLng(startLat, startLon),
+                    L.latLng(endLat, endLon)
+                ],
+                routeWhileDragging: true,
+                createMarker: function() { return null; }
+            }).addTo(map);
+
+            routeControl.on('routesfound', function(event) {
+                var routes = event.routes;
+                var routeInfo = "<h5>Directions:</h5><ul>";
+                routes[0].instructions.forEach(function(instruction) {
+                    routeInfo += "<li>" + instruction.text + "</li>";
+                });
+                routeInfo += "</ul>";
+                document.getElementById('routes-info').innerHTML = routeInfo;
+
+                var distance = routes[0].summary.totalDistance / 1000;
+                var time = routes[0].summary.totalTime / 60;
+                document.getElementById('route-summary').innerHTML = 
+                    "<strong>Total Distance:</strong> " + distance.toFixed(1) + " km <br/>" +
+                    "<strong>Estimated Time:</strong> " + Math.round(time) + " min";
+                document.getElementById('route-summary').style.display = 'block';
+            });
+
+        } else {
+            document.getElementById('routes-info').innerHTML = '<p class="text-danger">Invalid coordinates. Please check your input.</p>';
+            document.getElementById('route-summary').style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+{
+    "results": [
+        {
+            "question": "A type of pollution found both indoors and outdoors, which includes pollen, dander, soot, carbon, and dust.",
+            "options": [
+              "a) Bio waste",
+              "b) Combustibles",
+              "c) Particulate matter",
+              "d) Water droplets"
+            ],
+            "correct_answer": "c) Particulate matter",
+            "info": "Particulate matter is a mixture of solid particles and liquid droplets found in the air, including dust, dirt, soot, and liquid droplets."
+          },
+        {
+            "question": "Which is true of air pollution and human health?",
+            "options": [
+                "a) Air pollution is commonly listed as a cause of death.",
+                "b) Healthy adults are most affected by air pollution.",
+                "c) None of the health effects of air pollution are reversible.",
+                "d) Years of research link air pollution to lung diseases, birth defects, and cancer"
+            ],
+            "correct_answer": "d) Years of research link air pollution to lung diseases, birth defects, and cancer",
+            "info": "Years of research have shown a strong connection between air pollution and various health issues such as lung diseases and cancer."
+        },
+        {
+            "question": "The following ailments are long-term effects of air pollution EXCEPT",
+            "options": [
+                "a) emphysema. (hardening of lungs)",
+                "b) heart disease.",
+                "c) headaches.",
+                "d) lung cancer."
+            ],
+            "correct_answer": "c) headaches.",
+            "info": "Headaches are typically short-term effects caused by air pollution, while lung cancer, heart disease, and emphysema are long-term effects."
+        },
+        {
+            "question": "Dust, ash and pollen are examples of this air pollutant",
+            "options": [
+                "a) Ground-level ozone",
+                "b) Lead",
+                "c) Nitrogen oxides",
+                "d) Particulate matter"
+            ],
+            "correct_answer": "d) Particulate matter",
+            "info": "Particulate matter includes tiny particles in the air that can affect the respiratory system, including dust, soot, and pollen."
+        },
+        {
+            "question": "Source of carbon monoxide",
+            "options": [
+                "a) Combustion of fossil fuels",
+                "b) Decomposition of plant and animal matters",
+                "c) Incomplete combustion of fossil fuels",
+                "d) Photochemical reaction of CO2"
+            ],
+            "correct_answer": "c) Incomplete combustion of fossil fuels",
+            "info": "Carbon monoxide is produced during the incomplete combustion of carbon-containing fuels such as gas, coal, and wood."
+        },
+        {
+            "question": "What is air pollution?",
+            "options": [
+                "a) Any harmful substance that builds up in the air",
+                "b) chemicals in the water",
+                "c) industrial pollution",
+                "d) pollen, dust, gases"
+            ],
+            "correct_answer": "a) Any harmful substance that builds up in the air",
+            "info": "Air pollution refers to the presence of harmful substances in the air, which can come from various sources, including factories, vehicles, and natural events."
+        },
+        {
+            "question": "Which pair below are the two main sources of air pollution in urban (populated) areas?",
+            "options": [
+                "a) industries, agriculture",
+                "b) vehicles, industries",
+                "c) vehicles, volcanoes",
+                "d) All of the above"
+            ],
+            "correct_answer": "b) vehicles, industries",
+            "info": "In urban areas, vehicles and industries are the primary contributors to air pollution, emitting harmful gases like nitrogen oxides and sulfur dioxide."
+        },
+        {
+            "question": "What causes acid rain?",
+            "options": [
+                "a) CFCs",
+                "b) Fertilizer use",
+                "c) High concentrations of sulfuric or nitric acid from pollution",
+                "d) Pesticide use"
+            ],
+            "correct_answer": "c) High concentrations of sulfuric or nitric acid from pollution",
+            "info": "Acid rain forms when sulfur dioxide and nitrogen oxides from burning fossil fuels combine with water vapor in the atmosphere to form sulfuric and nitric acids."
+        },
+        {
+            "question": "Which of the following is an example of a primary pollutant?",
+            "options": [
+                "a) Acid rain",
+                "b) Asbestos",
+                "c) Carbon monoxide",
+                "d) Ozone"
+            ],
+            "correct_answer": "c) Carbon monoxide",
+            "info": "Primary pollutants are released directly into the air, such as carbon monoxide, sulfur dioxide, and particulate matter."
+        },
+        {
+            "question": "Which of the following is NOT a primary pollutant?",
+            "options": [
+                "a) nitric oxides",
+                "b) smog",
+                "c) sulfur dioxide",
+                "d) volatile organic compounds"
+            ],
+            "correct_answer": "b) smog",
+            "info": "Smog is a secondary pollutant, formed by a chemical reaction between primary pollutants like nitrogen oxides and volatile organic compounds in the presence of sunlight."
+        },
+        {
+            "question": "What is the major cause for air pollution?",
+            "options": [
+                "a) cigarretes",
+                "b) deforestation",
+                "c) oil spills",
+                "d) transportation"
+            ],
+            "correct_answer": "d) transportation",
+            "info": "Transportation, especially vehicles that burn fossil fuels, is one of the leading causes of air pollution worldwide."
+        },
+        {
+            "question": "Which of the following is a solution to reduce air pollution?",
+            "options": [
+                "a) dust storm",
+                "b) methane from landfills",
+                "c) use public transport more",
+                "d) volcano eruption"
+            ],
+            "correct_answer": "c) use public transport more",
+            "info": "Using public transport helps reduce the number of vehicles on the road, thereby reducing emissions and air pollution."
+        },
+        {
+            "question": "The ozone layer protects us from",
+            "options": [
+                "a) Increased atmospheric heat",
+                "b) UV rays",
+                "c) CFCs",
+                "d) Decreased atmospheric heat"
+            ],
+            "correct_answer": "b) UV rays",
+            "info": "The ozone layer absorbs most of the Sun's harmful ultraviolet radiation, which can cause skin cancer and other health issues."
+        },
+        {
+            "question": "What is a primary pollutant?",
+            "options": [
+                "a) pollutant that is put directly into air by human activities",
+                "b) pollutants that react with other primary pollutants"
+            ],
+            "correct_answer": "a) pollutant that is put directly into air by human activities",
+            "info": "Primary pollutants are directly emitted from sources like factories, vehicles, and wildfires, such as carbon monoxide and sulfur dioxide."
+        },
+        {
+            "question": "The ozone layer is damaged by",
+            "options": [
+                "a) Increased global temperatures",
+                "b) CFCs",
+                "c) Sulfuric and nitric acids",
+                "d) Increase in greenhouse gases"
+            ],
+            "correct_answer": "b) CFCs",
+            "info": "Chlorofluorocarbons (CFCs) were once widely used in refrigerators and air conditioners, and they contribute to the depletion of the ozone layer."
+        },
+        {
+            "question": "Global warming is due to",
+            "options": [
+                "a) Greenhouse gases",
+                "b) Nitric and sulfuric acids",
+                "c) Ozone depletion",
+                "d) CFCs"
+            ],
+            "correct_answer": "a) Greenhouse gases",
+            "info": "Greenhouse gases like carbon dioxide and methane trap heat in the atmosphere, contributing to global warming and climate change."
+        },
+        {
+            "question": "Which two primary pollutants most often result in acid rain?",
+            "options": [
+                "a) carbonic acid and citric acid",
+                "b) carbon monoxide and VOCs",
+                "c) sulfuric dioxide and nitric oxide",
+                "d) ZEVs and VOCs"
+            ],
+            "correct_answer": "c) sulfuric dioxide and nitric oxide",
+            "info": "Sulfur dioxide and nitrogen oxides are the two main primary pollutants responsible for the formation of acid rain."
+        }
+    ]
+}

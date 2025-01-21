@@ -79,3 +79,40 @@ footer {
 	margin-top: 40px;
 	text-align: center;
 }
+
+/* .navbar {
+	background-image: linear-gradient(to right bottom, #a3c8ff, #7ab1ff, #85b7d8, #4f678d); /* Lighter version of the original gradient */
+	/* padding: 10px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+} */
+
+/* .navbar-brand {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: white;
+} */
+
+/* .navbar-nav .nav-link {
+	color: white !important;
+	font-weight: 600;
+	margin-left: 15px;
+} */
+
+/* .navbar-nav .nav-link:hover {
+	color: #f1f1f1 !important;
+} */
+
+/* .navbar-toggler-icon {
+	background-color: white;
+} */ */
+
+        /* Set the background of the full page to a blue shade */
+        /* html, body {
+    height: 100%; /* Ensure the body and html take up the full height */
+    /* margin: 0; Remove default margin */
+    /* background: linear-gradient(to right bottom, #00c6ff, #0072ff, #4b6cb7, #182848); Gradient background */
+/*

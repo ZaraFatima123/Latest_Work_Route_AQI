@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Pollution Quiz</title>
+    <link rel="stylesheet" href="style7.css"/>
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen" class="start-screen">
+        <h1>Welcome to the Air Pollution Quiz!</h1>
+        <p>Test your knowledge about air pollution, its effects, and ways to combat it.</p>
+        <!-- Play Button -->
+        <button id="play-btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Content -->
+    <main id="quiz-container" class="quiz-container hide">
+        <!-- Heading for the quiz game -->
+        <h1 class="quiz-heading">Air Pollution Quiz Game</h1>
+        
+        <!-- Container for quiz questions and choices -->
+        <div id="question" class="question"></div> <!-- Placeholder for the quiz question -->
+        <div id="choices" class="choices"></div> <!-- Container for the answer choices -->
+        
+        <!-- Paragraph to display the current score -->
+        <p id="score">Score: 0</p>
+        
+        <!-- Button to reset the game -->
+        <button id="reset-btn">Reset Game</button>
+    </main>
+    
+    <!-- Container for feedback messages and celebration image below the quiz content -->
+    <div class="msg-container hide">
+        <p id="msg"></p> <!-- Message to display results or feedback -->
+        <button id="new-btn">New Game</button> <!-- Button to start a new game -->
+        <!-- <img id="celebration-image" src="celebration.png" alt="Congratulations!" class="feedback-image hide"/> Image for celebration -->
+    </div>
+
+    <!-- Link to external JavaScript file for game logic -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="Quiz_app_Air.js"></script>
+</body>
+</html>
