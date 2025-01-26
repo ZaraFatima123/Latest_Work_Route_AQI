@@ -12,8 +12,11 @@
     body {
       font-family: Arial, sans-serif;
     }
-    .pollutant-info, .weather-info {
+    .pollutant-info{
       margin-top: 20px;
+    }
+    .weather-info {
+      margin-top: 30px;
     }
     .navbar {
       background-image: linear-gradient(to right bottom, #a3c8ff, #7ab1ff, #85b7d8, #4f678d); 
@@ -87,10 +90,23 @@
     </div>
 
     <!-- Weather Info Section -->
-    <div id="weatherInfo" class="weather-info" style="display: none; padding: 15px; border-radius: 8px;">
+    <!-- <div id="weatherInfo" class="weather-info" style="display: none; padding: 15px; border-radius: 8px;">
       <h5>Weather Information</h5>
       <p id="weatherDescription"></p>
-    </div>
+    </div> -->
+
+    <!-- Weather Info Section -->
+<div id="weatherInfo" class="weather-info" style="display: none; padding: 15px; border-radius: 8px;">
+  <h5><b>Weather Information</b></h5>
+  <p id="weatherDescription"></p>
+</div>
+
+<!-- Pollutant Info -->
+<div id="pollutantInfo" class="pollutant-info" style="display: none;">
+  <h5><b>Pollutant Information</b></h5>
+  <p id="pollutantDescription"></p>
+</div>
+
 
     <!-- Air Quality Card Section -->
     <div id="airQualityCardContainer"></div>
@@ -104,6 +120,62 @@
     <!-- Air Quality Levels Table -->
     <div id="airQualityLevelsContainer"></div>
   </div>
+
+  <style>
+    #airQualityLevelsContainer {
+      background-color: #d9d9d9; /* Light grey background for the container */
+      padding: 20px;            /* Add padding for spacing */
+      border-radius: 8px;       /* Add rounded corners */
+      margin-top: 20px;         /* Space above the container */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+  
+    #airQualityLevelsContainer table {
+      background-color: #f2f2f2; /* Light grey for the whole table */
+      border-collapse: collapse;
+      width: 100%;
+      text-align: left;
+    }
+  
+    #airQualityLevelsContainer table th,
+    #airQualityLevelsContainer table td {
+      padding: 10px;
+      border: 1px solid #ddd; /* Light border for all cells */
+      background-color: #e6e6e6; /* Slightly darker grey for fields */
+      color: #333; /* Darker text for readability */
+    }
+  
+    #airQualityLevelsContainer table th {
+      background-color: #bfbfbf; /* Dark grey for headers */
+      font-weight: bold;
+    }
+
+    
+  #airQualityHeader {
+    background-color: #f5e6cc; /* Light brown background */
+    padding: 10px 20px;       /* Add padding for spacing */
+    border-radius: 8px;       /* Rounded corners */
+    text-align: center;       /* Center the text */
+    font-size: 24px;          /* Larger font size for visibility */
+    font-weight: bold;        /* Bold text */
+    color: #5a3d1a;           /* Darker brown for contrast */
+    margin-bottom: 20px;      /* Space below the header */
+  }
+ 
+  .card-body {
+    background-color: #d3d3d3; /* Light grey background for the card body */
+    padding: 20px;           /* Add padding for spacing */
+    border-radius: 8px;      /* Rounded corners for a modern look */
+    color: #333;             /* Text color for better contrast */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+
+
+  </style>
+  
+  
+  
 
   <script>
     const apiKey = '3af302ef713eeedc6b5d97ad71cc2373';  // Replace with your OpenWeatherMap API Key
